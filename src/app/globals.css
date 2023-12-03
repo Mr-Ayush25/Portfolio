@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.effect-container {
+  overflow: hidden;
+
+  --effect-duration: 1000ms;
+  --effect-height: 100px;
+  --effect-width: 100px;
+  --effect-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.effect-container::before {
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+
+  top: 0px;
+  left: 0px;
+  height: var(--effect-height);
+  width: var(--effect-width);
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: var(--effect-color);
+}
+
+.effect-container.ripplespan::before {
+  border-radius: 50%;
+  z-index: -10;
+  animation: ripple var(--effect-duration) linear forwards;
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  to {
+    transform: scale(5);
+    opacity: 1;
+  }
 }
