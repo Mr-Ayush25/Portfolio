@@ -1,6 +1,6 @@
 const ContactForm = () => {
   return (
-    <form className="h-auto w-full md:w-[600px] flex flex-col justify-between gap-8 lg:gap-10 rounded-xl py-7  lg:py-14 lg:px-10 lg:shadow-lg lg:hover:shadow-xl lg:hover:-translate-y-1 shadow-gray-400  dark:shadow-gray-400 lg:hover:shadow-gray-600 dark:lg:hover:shadow-gray-700 transition-all duration-200 ease-in-out">
+    <form className="h-auto mx-auto w-full md:w-[600px] flex flex-col justify-between gap-8 lg:gap-10 rounded-xl py-7  lg:py-14 lg:px-10 lg:shadow-lg lg:hover:shadow-xl lg:hover:-translate-y-1 shadow-gray-400  dark:shadow-gray-400 lg:hover:shadow-gray-600 dark:lg:hover:shadow-gray-700 transition-all duration-200 ease-in-out">
       <input
         type="text"
         placeholder="Name"

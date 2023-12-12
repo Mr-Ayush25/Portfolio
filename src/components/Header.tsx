@@ -51,7 +51,14 @@ const Header = () => {
   return (
     <header className="fixed z-20 h-24 p-2 sm:px-6 lg:pt-6 lg:px-12 w-full">
       <nav className="relative w-full h-full flex text-xl font-bold justify-between items-center max-lg:bg-gray-100/80 max-lg:rounded-2xl max-lg:px-3">
-        <Link href="/" className="cursor-pointer">
+        <Link
+          href="/"
+          className={`cursor-pointer ${
+            scrollPosition >= 1000 &&
+            scrollPosition <= 3480 &&
+            "dark:text-white"
+          }`}
+        >
           Ayush <br /> - Tiwari
         </Link>
         {/* Desktop */}
@@ -90,7 +97,11 @@ const Header = () => {
         {/* Mobile */}
         <div
           className={clsx(
-            "max-sm:flex relative effect-container h-12 w-12 rounded-full border-2 border-black cursor-pointer flex justify-center items-center group transition-all duration-300 ease-in-out z-50",
+            `max-sm:flex relative effect-container h-12 w-12 rounded-full border-2 border-black cursor-pointer flex justify-center items-center group transition-all duration-300 ease-in-out z-50 ${
+              scrollPosition >= 1000 &&
+              scrollPosition <= 3480 &&
+              "dark:text-white dark:border-white"
+            }`,
             { hidden: !toggleMobileNav }
           )}
           onMouseEnter={(e) => {

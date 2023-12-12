@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section className="relative py-14 max-w-7xl mx-auto w-full flex flex-col gap-14 lg:gap-28 px-7">
       <div className="relative mt-10 md:mt-20 lg:mt-24 xl:mt-36 w-full font-semibold text-4xl sm:text-7xl md:text-7xl lg:text-8xl">
-        <h1>
+        <h1 className="">
           Let&rsquo;s talk about our <br /> next project.
         </h1>
         <div className="hidden md:block relative">
@@ -20,7 +20,7 @@ const Contact = () => {
           />
         </div>
       </div>
-      <div className="mx-auto max-w-3xl h-full w-full">
+      <div className="mx-auto max-w-xl lg:max-w-3xl h-full w-full">
         <ContactForm />
       </div>
     </section>

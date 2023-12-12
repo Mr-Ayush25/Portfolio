@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div className="flex justify-center items-center gap-4">
           <Link
-            href=""
+            href="https://github.com/Mr-Ayush25/Portfolio"
             target="blank"
             prefetch={false}
             className="hover:scale-110 transition-all duration-200 ease-in-out"
@@ -48,7 +48,7 @@ const Footer = () => {
             <FaGithub className="h-6 w-6 rounded-full bg-white" />
           </Link>
           <Link
-            href=""
+            href="https://www.linkedin.com/in/ayush-tiwari-n2511/"
             target="blank"
             prefetch={false}
             className="bg-gray-900 p-1 rounded-full text-white hover:scale-110 transition-all duration-200 ease-in-out"

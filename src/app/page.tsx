@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import Project from "@/components/Project";
+import { projectData } from "@/constants/projectdata";
 
 export default function Home() {
   return (
@@ -53,15 +54,21 @@ export default function Home() {
       {/* Work Section */}
       <section
         id="work"
-        className="min-h-screen bg-gradient-to-b from-[#d0ebff] via-[#b9d7fd] to-[#cbfcdd] px-7 sm:px-14  py-12 sm:py-24 lg:py-40"
+        className="min-h-screen bg-[#e9a6d8]  dark:bg-gray-500  px-7 sm:px-14  py-12 sm:py-24 lg:py-40"
       >
-        <h2 className="text-3xl max-w-5xl mx-auto sm:text-4xl lg:text-6xl my-10">
+        <h2 className="text-3xl max-w-5xl mx-auto sm:text-4xl lg:text-6xl my-10 dark:text-gray-100">
           Things I&rsquo;ve built..
         </h2>
         <div className="flex flex-col items-center justify-center max-w-6xl gap-40 mx-auto ">
-          <Project />
-          <Project />
-          <Project />
+          {projectData.map((project) => (
+            <Project
+              key={project.webUrl}
+              description={project.description}
+              webUrl={project.webUrl}
+              imagePath={project.imagePath}
+              title={project.title}
+            />
+          ))}
         </div>
       </section>
     </main>
