@@ -2,6 +2,7 @@
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   return (
@@ -19,6 +20,7 @@ const Contact = () => {
             className="absolute left-[5%] top-14"
           />
         </div>
+        <Toaster position="bottom-left" reverseOrder={true} />
       </div>
       <div className="mx-auto max-w-xl lg:max-w-3xl h-full w-full">
         <ContactForm />

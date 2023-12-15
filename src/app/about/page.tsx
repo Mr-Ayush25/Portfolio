@@ -103,8 +103,8 @@ const About = () => {
         </div>
         <motion.div className="max-lg:max-w-5xl mx-auto pb-10">
           <h2 className="text-gray-900 text-2xl tracking-wide leading-10 md:text-3xl md:leading-[46px] lg:lg:leading-[60px]">
-            🌟 I&rsquo;m Ayush Tiwari, a Computer Science graduate from Mumbai,
-            kind of a wizard with computers.
+            🌟 I&rsquo;m Ayush Tiwari, a full stack developer that specializes
+            in ReactJS, Javascript, TypeScript and the MERN stack.
             <br />
             <br />
             I spend my time creating cool things with codes. But wait, there is
