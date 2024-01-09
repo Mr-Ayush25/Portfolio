@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import footerAnimation from "../../public/footer.json";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
-import { LiaTelegramPlane } from "react-icons/lia";
+import { FaRegMessage } from "react-icons/fa6";
 import Link from "next/link";
 
 const Footer = () => {
@@ -21,21 +21,20 @@ const Footer = () => {
           Say Hello.
         </h2>
         <div className="flex justify-center flex-col sm:flex-row items-center gap-4">
-          <a
+          <Link
             href="mailto:mr.ayush1125@gmail.com"
             className="text-xl bg-white py-2 px-6 rounded-full hover:tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-200 ease-in-out group"
           >
             Mr.ayush1125@gmail.com
-            <LiaTelegramPlane className="h-5 w-5 inline-block ml-2" />
-          </a>
-          <a
-            href="#"
-            download="#"
+            <FaRegMessage className="h-5 w-5 inline-block ml-2" />
+          </Link>
+          <Link
+            href="https://drive.google.com/file/d/1ZznMKkgrZStOonvmXntyqxV1BOsiSrPd/view?usp=sharing"
+            target="blank"
             className="text-xl bg-white py-2 px-6 rounded-full hover:tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-200 ease-in-out group"
           >
-            Resume
-            <FaDownload className="h-4 w-4 inline-block ml-2" />
-          </a>
+            See Resume
+          </Link>
         </div>
 
         <div className="flex justify-center items-center gap-4">
@@ -56,7 +55,7 @@ const Footer = () => {
             <FaLinkedinIn />
           </Link>
         </div>
-        <p className="text-gray-600">&#169; Ayush Tiwari | 2023</p>
+        <p className="text-black">&#169; Ayush Tiwari | 2023</p>
       </div>
     </div>
   );

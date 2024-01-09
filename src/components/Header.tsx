@@ -20,7 +20,7 @@ const Header = () => {
     const handleScroll = () => {
       // If we are on mobile device do nothing
 
-      if (window.matchMedia("(max-width: 576px)").matches) return;
+      if (window.matchMedia("(max-width: 600px)").matches) return;
       else setScrollPosition(window.scrollY);
       // console.log(window);
       scrollPosition >= 120
@@ -55,7 +55,7 @@ const Header = () => {
           href="/"
           className={`cursor-pointer ${
             scrollPosition >= 1000 &&
-            scrollPosition <= 3480 &&
+            scrollPosition <= 4100 &&
             "dark:text-white"
           }`}
         >
@@ -99,7 +99,7 @@ const Header = () => {
           className={clsx(
             `max-sm:flex relative effect-container h-12 w-12 rounded-full border-2 border-black cursor-pointer flex justify-center items-center group transition-all duration-300 ease-in-out z-50 ${
               scrollPosition >= 1000 &&
-              scrollPosition <= 3480 &&
+              scrollPosition <= 4100 &&
               "dark:text-white dark:border-white"
             }`,
             { hidden: !toggleMobileNav }

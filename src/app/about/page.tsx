@@ -116,7 +116,7 @@ const About = () => {
           </h2>
         </motion.div>
       </section>
-      <section className="bg-[#eaa6a6] dark:bg-orange-400 w-full flex flex-col justify-center items-start text-gray-900 md:text-7xl lg:text-8xl overflow-hidden transition-all ease-in-out duration-300">
+      <section className="bg-[#eaa6a6] dark:bg-gray-500 w-full flex flex-col justify-center items-start text-gray-900 md:text-7xl lg:text-8xl overflow-hidden transition-all ease-in-out duration-300">
         <div className="max-w-6xl mx-auto px-6 w-full py-8 ">
           <h2 className="font-semibold text-3xl tracking-wide leading-10 md:text-3xl lg:lg:leading-[60px]">
             How I build things ?

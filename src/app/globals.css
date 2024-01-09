@@ -41,3 +41,7 @@
     opacity: 1;
   }
 }
+
+.skillMarquee {
+  @apply mx-2 px-2 py-1 lg:mx-4 lg:px-4 lg:py-2 border lg:border-2 border-gray-100 rounded-full;
+}
