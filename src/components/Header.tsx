@@ -20,7 +20,7 @@ const Header = () => {
     const handleScroll = () => {
       // If we are on mobile device do nothing
 
-      if (window.matchMedia("(max-width: 600px)").matches) return;
+      if (window.matchMedia("(max-width: 560px)").matches) return;
       else setScrollPosition(window.scrollY);
       // console.log(window);
       scrollPosition >= 120
@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <header className="fixed z-20 h-24 p-2 sm:px-6 lg:pt-6 lg:px-12 w-full">
-      <nav className="relative w-full h-full flex text-xl font-bold justify-between items-center max-lg:bg-gray-100/80 max-lg:rounded-2xl max-lg:px-3">
+      <nav className="relative w-full h-full flex text-xl font-bold justify-between items-center max-lg:bg-gray-100 max-lg:rounded-2xl max-lg:px-3">
         <Link
           href="/"
           className={`cursor-pointer ${

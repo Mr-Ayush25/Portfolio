@@ -32,15 +32,6 @@ const Project = ({
 }: Props) => {
   // Hooks
   const container = useRef(null);
-  const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 550px)").matches
-  );
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.matchMedia("(max-width: 550px)").matches);
-    });
-  }, [isMobile]);
 
   // Framer-Motion hooks
   const { scrollYProgress } = useScroll({
@@ -49,7 +40,7 @@ const Project = ({
   });
 
   // To scale as per view
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 0.7], [1.2, 1]);
   const cardScale2 = useTransform(progress, range, [1, targetScale]);
 
   return (
@@ -57,16 +48,16 @@ const Project = ({
       ref={container}
       style={{
         scale: cardScale2,
-        top: isMobile ? "100px" : `${index * 25}px`,
+        top: `${index * 25}px`,
       }}
-      className={`h-[720px] max-w-[1200px] flex justify-center items-center sticky`}
+      className={`h-[720px] max-w-[1200px] flex justify-center items-center md:sticky`}
     >
       <div
         style={{ backgroundColor: color }}
         className="relative bg-red-500 h-full md:h-3/4 lg:h-4/5 w-full rounded-2xl md:rounded-3xl flex flex-col border-gray-400 hover:shadow-2xl hover:border shadow-gray-600 dark:hover:shadow-slate-700 transition-all duration-150 ease-in-out"
       >
         <div className="flex h-full w-full flex-col-reverse md:flex-row justify-center items-center gap-2 lg:gap-4 p-4 xl:px-12">
-          <div className="flex h-1/2 md:w-2/4 lg:w-2/5 md:h-full flex-col justify-center gap-3 md:gap-5 xl:gap-8">
+          <div className="flex h-1/2 md:w-2/4 lg:w-2/5 md:h-full flex-col justify-center gap-4 md:gap-5 xl:gap-8">
             <div className="flex w-full items-center justify-start text-3xl lg:text-4xl text-black font-bold">
               {title}
             </div>
