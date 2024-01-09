@@ -41,14 +41,14 @@ export default function Home() {
             Hello I&rsquo;m Ayush Tiwari.
           </motion.p>
           <div className="flex gap-2 lg:gap-4 justify-between items-center">
-            <p className="text-6xl  mkd:text-[120px] lg:text-[140px] lg:leading-[140px]">
+            <p className="text-[58px] leading-none  mkd:text-[120px] lg:text-[140px] lg:leading-[140px]">
               Creative
             </p>
             <div className="max-md:hidden md:block md:h-28 sm:w-40 rounded-[25px] lg:h-40 lg:w-52 lg:rounded-[50px] overflow-hidden flex flex-col items-end justify-start">
               <Lottie animationData={animationData} />
             </div>
           </div>
-          <p className="text-6xl md:text-[120px] lg:text-[140px] lg:leading-[140px]">
+          <p className="text-[58px] leading-none md:text-[120px] lg:text-[140px] lg:leading-[140px]">
             - Developer
           </p>
         </div>
